@@ -1,0 +1,141 @@
+body {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+}
+#flex-container {
+  display: flex;
+  background: url("https://www.goodfreephotos.com/albums/other-photos/music-notes-and-sheet-music-on-a-piano.jpg");
+  background-size: cover;
+  min-height: 100vh;
+}
+#main {
+  display: grid;
+  margin: 5em 10em 10em 10em;
+  background-color: rgba(255, 255, 255, 0.9);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "form";
+}
+header {
+  grid-area: header;
+  text-align: center;
+}
+#survey-form {
+  display: grid;
+  padding: 2em 5em 2em 5em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name-label name-input"
+    "email-label email-input"
+    "age-label age-input"
+    "level-label level-select"
+    "location-label location-radios"
+    "genre-label genre-checkboxes"
+    "comment-label comment-input"
+    "submit submit";
+}
+label {
+  line-height: 1.5em;
+  padding-bottom: 1em;
+  padding-right: .5em;
+  text-align: right;
+}
+.inputs {
+  height: 1.5em;
+  margin-bottom: 2em;
+}
+.dropdown {
+  height: 2em;
+  margin-bottom: 2em;
+}
+#name-label {
+  grid-area: name-label;
+}
+#name {
+  grid-area: name-input;
+}
+#email-label {
+  grid-area: email-label;
+}
+#email {
+  grid-area: email-input;
+}
+#number-label {
+  grid-area: age-label;
+}
+#number {
+  grid-area: age-input;
+}
+#level {
+  grid-area: level-label;
+}
+#dropdown {
+  grid-area: level-select;
+}
+#location {
+  grid-area: location-label;
+}
+#location-list {
+  grid-area: location-radios;
+}
+#genre-label {
+  grid-area: genre-label; 
+}
+#genre-list {
+  grid-area: genre-checkboxes;
+}
+#comment-label {
+  grid-area: comment-label;
+}
+#comments {
+  grid-area: comment-input;
+  height: 5em;
+}
+#submit {
+  grid-area: submit;
+  justify-self: center;
+  background-color: black;
+  color: white;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  height: 2.5em;
+  width: 8em;
+  font-size: 1em;
+  margin: 1em;
+}
+#submit:hover {
+  animation-name: rainbow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes rainbow {
+  50% {
+    background-color: #C0C0C0;
+  }
+  100% {
+    background-color: #778899;
+  }
+}
+@media (max-width: 600px) {
+  #survey-form {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name-label"
+      "name-input"
+      "email-label"
+      "email-input"
+      "age-label"
+      "age-input"
+      "level-label"
+      "level-select"
+      "location-label"
+      "location-radios"
+      "genre-label"
+      "genre-checkboxes"
+      "comment-label"
+      "comment-input"
+      "submit";
+  }
+}

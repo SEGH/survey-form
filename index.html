@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="flex-container">
+<div id="main">
+  <header>
+<h1 id="title">Student Survey</h1>
+<p id="description">Tell us about your music goals</p>
+  </header>
+  <form id="survey-form">
+  <label id="name-label" for="name">What should we call you?</label>
+  <input autofocus type="text" name="name" id="name" class="inputs" placeholder="Name" required>
+  <label id="email-label" for="email">Where can we send you stuff?</label>
+  <input autofocus type="email" name="email" id="email" class="inputs" placeholder="Email" required>
+  <label id="number-label" for="number">How old are you?</label>
+  <input autofocus type="number" name="age" id="number" min="1" max="110" class="inputs" placeholder="Age" required>
+  <label id="level" for="dropdown">How would you describe your current music experience?</label>
+  <select id="dropdown" name="level" class="dropdown">
+    <option disabled value>Choose one</option>
+    <option value="beginner">Total Beginner</option>
+    <option value="self-taught">Some self-taught</option>
+    <option value="intermediate">1-4 years lessons</option>
+    <option value="advanced">4+ years lessons</option>
+   </select>
+  <label id="location" for="location-list">Where would you prefer to have your lessons?</label>
+  <ul id="location-list" style="list-style: none;">
+    <li>
+      <input id="radio-button-one" value="1" name="radio-button" type="radio">
+      <label for="radio-button-one">Home</label>
+    </li>
+    <li>
+      <input id="radio-button-two" value="2" name="radio-button" type="radio">
+      <label for="radio-button-two">Studio</label>
+    </li>
+  </ul>
+  <label id="genre-label" for="genre-list">Which genres most interest you?<br>(Check all that apply)</label>
+  <ul id="genre-list" style="list-style: none;">
+    <li>
+      <input id="folk" name="genre" value="1" type="checkbox">
+      <label for="folk">Folk</label>
+    </li>
+    <li>
+      <input id="jazz" name="genre" value="2" type="checkbox">
+      <label for="jazz">Jazz</label>
+    </li>
+    <li>
+      <input id="rock" name="genre" value="3" type="checkbox">
+      <label for="rock">Rock</label>
+    </li>
+    <li>
+      <input id="classical" name="genre" value="4" type="checkbox">
+      <label for="classical">Classical</label>
+    </li>
+    <li>
+      <input id="pop" name="genre" value="5" type="checkbox">
+      <label for="pop">Pop</label>
+    </li>
+    <li>
+      <input id="hiphop" name="genre" value="6" type="checkbox">
+      <label for="hiphop">Hip Hop</label>     </li>
+    <li>
+      <input id="blues" name="genre" value="7" type="checkbox">
+      <label for="blues">Blues</label>         </li>
+    <li>
+      <input id="country" name="genre" value="8" type="checkbox">
+      <label for="country">Country</label>     </li>
+    <li>
+      <input id="rb" name="genre" value="9" type="checkbox">
+      <label for="rb">R&B</label>
+    </li>
+  </ul>
+  <label id="comment-label" for="comments">List some songs or artists you'd like to learn, or other goals you have for your music studies.</label>
+  <textarea id="comments" class="inputs" name="comments" placeholder="Write your goals here..."></textarea>
+  <button id="submit" type="submit">Submit</button>
+    </form>
+</div>
+</div>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
