@@ -118,6 +118,15 @@ label {
     background-color: #778899;
   }
 }
+@media (max-width: 775px) {
+  #main {
+    margin: 0;
+    padding: 0;
+  }
+  #survey-form {
+    padding: .5em;
+  }
+}
 @media (max-width: 600px) {
   #survey-form {
     grid-template-columns: 1fr;
@@ -137,5 +146,8 @@ label {
       "comment-label"
       "comment-input"
       "submit";
+  }
+  label {
+    text-align: left;
   }
 }
